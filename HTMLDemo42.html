@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Big for loop</title>
+  <script>
+      function sayHello(){
+         alert("Hello sir...." );      }
+  </script></head>
+<body>
+<div id="data">Here the data will be displayed</div>
+   <input type="button" onclick="startWorker();" value="Big Loop" />
+   <input type="button" onclick="sayHello();" value="Say Hello" />
+    <input type="button" onclick="stopWorker();" value="Stop loop" />
+</body>
+<script>
+    var wrkr;
+    
+    function startWorker() {
+        if(typeof(Worker) !== "undefined") {
+            if(typeof(wrkr) == "undefined") {
+                wrkr = new Worker("internalfile.js");
+            }
+            wrkr.onmessage = function(event) {
+                document.getElementById("data").innerHTML = event.data;
+            };
+        } else {
+            document.getElementById("data").innerHTML = "No support for browser";
+        }}
+    function stopWorker() { 
+        wrkr.terminate();
+        wrkr = undefined;}
+    </script></html>
+    
