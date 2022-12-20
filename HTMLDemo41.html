@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html><head><script>
+function Counter() {
+    if(typeof(Storage) !== "undefined") {
+        if (sessionStorage.Counter) {
+            sessionStorage.Counter = Number(sessionStorage.Counter)+1;
+        } else {
+            sessionStorage.Counter = 1;        }
+if(!sessionStorage.user){
+sessionStorage.user = "Tamojit";}
+        document.getElementById("data").innerHTML =sessionStorage.user +" clicked "+ sessionStorage.Counter ;
+    } else {
+        document.getElementById("data").innerHTML = "No browser support";    }}
+</script></head>
+<body>
+<p><button onclick="Counter()" type="button">Counter</button></p>
+<div id="data"></div>
+<p>Example of session storage</p>
+</body></html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p> data stored in local Storage is : </p>
+<div id="data"></div>
+<script>
+// Check browser support
+if (typeof(Storage) != "undefined") {
+    // Store
+    localStorage.setItem("Username", "Tamojit");
+    // Retrieve
+    document.getElementById("data").innerHTML = localStorage.getItem("Username");
+} else {
+    document.getElementById("data").innerHTML = "No Browser support";}
+</script>
+<p>Example of local storage</p>
+</body></html>
