@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html><body>
+<form action="demo_form.asp" method="get"
+oninput="output.value=parseInt(first.value)*parseInt(second.value)">
+<input type="number" id="first" name="first" value="50">*
+<input type="number" id="second" name="second" value="50">=
+<output name="output" for="first second"></output>
+
+Age:
+  <input type="number" name="age" min="1" max="50">
+  <input type="submit" value="Send">
+
+  Date of Birth:
+  <input type="date" name="birthday">
+  <input type="submit" value="Send">
+  Date of Birth with date range:
+  <input type="date" name="birthday" min="1985-01-01" max="1995-01-01">
+  <input type="submit" value="Send">
+
+
+
+</form></body></html>
