@@ -1,0 +1,68 @@
+<html>
+<head>
+
+</head>
+<body>
+
+    <p id="display"/>
+
+    <button onclick="buttonClicked()">Click here</button>
+
+    <script>
+
+        // var pi = 3.14;
+
+        // document.getElementById('display').innerHTML = "Value of Pi is: "+pi;
+
+        // function sum(x,y){
+        //     return x+y;
+        // }
+
+        // var result = sum(10,20);
+        // alert("sum is"+ result);
+
+        function buttonClicked(){
+            alert("You clicked on a button...");
+        }
+
+        function verifyDate(){
+            alert("Inside a function...");
+
+            var uid = document.myForm.UID.value;
+
+            alert(uid);
+        }
+
+        //sum = (x,y)=>x+y;
+
+    </script>
+
+    <form id="myForm" onsubmit="verifyDate()" action="">
+
+        User ID: <input type="text" var="UID"> <br>
+
+        Password: <input type="password" var="password"> <br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+<table border="1">
+    <ROWS>
+      <tr>
+        <td>Car</td>
+        <td>Scooter</td>
+      </tr>
+      <tr>
+        <td>MotorBike</td>
+        <td>Bus</td>
+      </tr>
+      <tr>
+        <td>Aeroplane</td>
+        <td>Train</td>
+      </tr>
+    </ROWS>
+  </table>
+</body>
+
+
+</html>
